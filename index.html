@@ -30,6 +30,27 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* styles.css */
+        .shake-button {
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .shake-button.shaking {
+            animation: shake 1.3s ease infinite; /* Animasi goyang berulang */
+        }
+
+        @keyframes shake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+        100% { transform: translateX(0); }
+}
+    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -75,12 +96,16 @@
                     <div class="typed-text d-none">Full Stack Developer</div>
                 </div>
                 <div class="col-lg-6">
+                    <button id="toggleButton" class="shake-button btn btn-danger btn-sm">
+                        <i class="fa fa-music"></i>
+                    </button>
                         <img class="img-fluid" src="img/profile.png" alt="" width="400px">
                 </div>
             </div>
         </div>
     </div>
     <!-- Header End -->
+   
 
     <!-- About Start -->
     <div class="container-xxl py-6" id="about">
@@ -256,7 +281,12 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-danger btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+   
+    <!-- audio -->
+    <audio id="audioPlayer">
+    <source src="audio/Full-Stack.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+    </audio>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -272,6 +302,31 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- audio -->
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            var toggleButton = document.getElementById('toggleButton');
+            var audioPlayer = document.getElementById('audioPlayer');
+
+            toggleButton.addEventListener('click', function() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play(); // Memulai pemutaran audio
+                    toggleButton.innerHTML = '<i class="fa fa-pause"></i>'; // Mengubah ikon ke pause
+                    toggleButton.classList.add('shaking'); // Menambahkan kelas animasi
+                } else {
+                    audioPlayer.pause(); // Menghentikan pemutaran audio
+                    toggleButton.innerHTML = '<i class="fa fa-music"></i>'; // Mengubah ikon ke musik
+                    toggleButton.classList.remove('shaking'); // Menghapus kelas animasi
+                }
+            });
+
+            audioPlayer.addEventListener('ended', function() {
+                toggleButton.classList.remove('shaking'); // Menghapus kelas animasi saat audio selesai
+                toggleButton.innerHTML = '<i class="fa fa-music"></i>'; // Mengubah ikon ke musik
+            });
+        });
+     </script>
 </body>
 
 </html>
