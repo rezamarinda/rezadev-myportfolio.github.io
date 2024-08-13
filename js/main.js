@@ -120,35 +120,3 @@
 })(jQuery);
 
 // akhir
-
-document.addEventListener('DOMContentLoaded', function () {
-  var toggleButton = document.getElementById('toggleButton');
-  var audioPlayer = document.getElementById('audioPlayer');
-  var pointingHand = document.getElementById('pointingHand');
-
-  // Mulai memutar audio saat tombol musik ditekan
-  toggleButton.addEventListener('click', function () {
-    if (audioPlayer.paused) {
-      audioPlayer.play(); // Memulai pemutaran audio
-      toggleButton.innerHTML = '<i class="fa fa-pause"></i>'; // Mengubah ikon ke naga (sesuai request sebelumnya)
-      toggleButton.classList.add('shaking'); // Menambahkan kelas animasi
-      pointingHand.style.visibility = 'hidden'; // Sembunyikan tombol tangan dengan mengatur visibilitas
-    } else {
-      audioPlayer.pause(); // Menghentikan pemutaran audio
-      toggleButton.innerHTML = '<i class="fa fa-music"></i>'; // Mengubah ikon ke musik
-      toggleButton.classList.remove('shaking'); // Menghapus kelas animasi
-      pointingHand.style.visibility = 'visible'; // Tampilkan tombol tangan dengan mengatur visibilitas
-    }
-  });
-
-  audioPlayer.addEventListener('ended', function () {
-    toggleButton.classList.remove('shaking'); // Menghapus kelas animasi saat audio selesai
-    toggleButton.innerHTML = '<i class="fa fa-music"></i>'; // Mengubah ikon ke musik saat audio selesai
-    pointingHand.style.visibility = 'visible'; // Tampilkan kembali tombol tangan setelah lagu selesai
-  });
-
-  // Menambahkan fungsi klik pada tombol tangan yang akan menekan tombol musik
-  pointingHand.addEventListener('click', function () {
-    toggleButton.click();
-  });
-});

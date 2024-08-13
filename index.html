@@ -30,6 +30,59 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        /* akhir */
+        /* styles.css */
+        .shake-button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        }
+
+        .shake-button.shaking {
+        animation: shake 1.3s ease infinite; /* Animasi goyang berulang */
+        }
+        .hand-point {
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        animation: point 1.5s ease infinite;
+        margin-right: 10px;
+        }
+
+        @keyframes point {
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-10px);
+        }
+        }
+
+        @keyframes shake {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-5px);
+        }
+        50% {
+            transform: translateX(5px);
+        }
+        75% {
+            transform: translateX(-5px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+        }
+
+    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -286,6 +339,40 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var toggleButton = document.getElementById('toggleButton');
+        var audioPlayer = document.getElementById('audioPlayer');
+        var pointingHand = document.getElementById('pointingHand');
+
+        // Mulai memutar audio saat tombol musik ditekan
+        toggleButton.addEventListener('click', function () {
+            if (audioPlayer.paused) {
+            audioPlayer.play(); // Memulai pemutaran audio
+            toggleButton.innerHTML = '<i class="fa fa-pause"></i>'; // Mengubah ikon ke naga (sesuai request sebelumnya)
+            toggleButton.classList.add('shaking'); // Menambahkan kelas animasi
+            pointingHand.style.visibility = 'hidden'; // Sembunyikan tombol tangan dengan mengatur visibilitas
+            } else {
+            audioPlayer.pause(); // Menghentikan pemutaran audio
+            toggleButton.innerHTML = '<i class="fa fa-music"></i>'; // Mengubah ikon ke musik
+            toggleButton.classList.remove('shaking'); // Menghapus kelas animasi
+            pointingHand.style.visibility = 'visible'; // Tampilkan tombol tangan dengan mengatur visibilitas
+            }
+        });
+
+        audioPlayer.addEventListener('ended', function () {
+            toggleButton.classList.remove('shaking'); // Menghapus kelas animasi saat audio selesai
+            toggleButton.innerHTML = '<i class="fa fa-music"></i>'; // Mengubah ikon ke musik saat audio selesai
+            pointingHand.style.visibility = 'visible'; // Tampilkan kembali tombol tangan setelah lagu selesai
+        });
+
+        // Menambahkan fungsi klik pada tombol tangan yang akan menekan tombol musik
+        pointingHand.addEventListener('click', function () {
+            toggleButton.click();
+        });
+        });
+    </script>
 </body>
 
 </html>
