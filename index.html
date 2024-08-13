@@ -30,27 +30,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        /* styles.css */
-        .shake-button {
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-
-        .shake-button.shaking {
-            animation: shake 1.3s ease infinite; /* Animasi goyang berulang */
-        }
-
-        @keyframes shake {
-        0% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        50% { transform: translateX(5px); }
-        75% { transform: translateX(-5px); }
-        100% { transform: translateX(0); }
-}
-    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -96,9 +75,14 @@
                     <div class="typed-text d-none">Full Stack Developer</div>
                 </div>
                 <div class="col-lg-6">
-                    <button id="toggleButton" class="shake-button btn btn-danger btn-sm">
-                        <i class="fa fa-music"></i>
-                    </button>
+                    <!-- <div class="button-container"> -->
+                        <button id="pointingHand" class="hand-point btn btn-danger btn-sm">
+                            <i class="fa fa-hand-point-right"></i>
+                        </button>
+                        <button id="toggleButton" class="shake-button btn btn-danger btn-sm">
+                            <i class="fa fa-music"></i>
+                        </button>
+                    <!-- </div> -->
                         <img class="img-fluid" src="img/profile.png" alt="" width="400px">
                 </div>
             </div>
@@ -168,7 +152,7 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">
-                                Aplikasi Sistem Informasi Pengajuan Judul Skripsi Berbasis Website.
+                                Aplikasi Sistem Informasi Akademik Pengajuan Judul Skripsi Berbasis Website.
                             </p>
                           <p class="card-text">
                             <button class="btn btn-success btn-sm">SIM-PJS.</button>
@@ -302,31 +286,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
-    <!-- audio -->
-    <script>
-       document.addEventListener('DOMContentLoaded', function() {
-            var toggleButton = document.getElementById('toggleButton');
-            var audioPlayer = document.getElementById('audioPlayer');
-
-            toggleButton.addEventListener('click', function() {
-                if (audioPlayer.paused) {
-                    audioPlayer.play(); // Memulai pemutaran audio
-                    toggleButton.innerHTML = '<i class="fa fa-pause"></i>'; // Mengubah ikon ke pause
-                    toggleButton.classList.add('shaking'); // Menambahkan kelas animasi
-                } else {
-                    audioPlayer.pause(); // Menghentikan pemutaran audio
-                    toggleButton.innerHTML = '<i class="fa fa-music"></i>'; // Mengubah ikon ke musik
-                    toggleButton.classList.remove('shaking'); // Menghapus kelas animasi
-                }
-            });
-
-            audioPlayer.addEventListener('ended', function() {
-                toggleButton.classList.remove('shaking'); // Menghapus kelas animasi saat audio selesai
-                toggleButton.innerHTML = '<i class="fa fa-music"></i>'; // Mengubah ikon ke musik
-            });
-        });
-     </script>
 </body>
 
 </html>
