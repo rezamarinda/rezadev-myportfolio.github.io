@@ -42,7 +42,7 @@
         }
 
         .shake-button.shaking {
-        animation: shake 1.3s ease infinite; /* Animasi goyang berulang */
+        animation: rotating 4s linear infinite;
         }
         .hand-point {
         font-size: 20px;
@@ -64,24 +64,14 @@
         }
         }
 
-        @keyframes shake {
-        0% {
-            transform: translateX(0);
-        }
-        25% {
-            transform: translateX(-5px);
-        }
-        50% {
-            transform: translateX(5px);
-        }
-        75% {
-            transform: translateX(-5px);
-        }
-        100% {
-            transform: translateX(0);
-        }
-        }
-
+@keyframes rotating{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
     </style>
 </head>
 
@@ -131,7 +121,7 @@
                         <button id="pointingHand" class="hand-point btn btn-danger btn-sm">
                             <i class="fa fa-hand-point-right"></i>
                         </button>
-                        <button id="toggleButton" class="shake-button btn btn-danger btn-sm">
+                        <button id="toggleButton" class="shake-button btn btn-danger btn-sm rounded-circle">
                             <i class="fa fa-music"></i>
                         </button>
                     <!-- </div> -->
@@ -264,7 +254,7 @@
                                 Aplikasi Kopi Cerita Berbasis Website.
                             </p>
                           <p class="card-text">
-                            <button class="btn btn-danger btn-sm">Masih Tahap Development.</button>
+                            <button class="btn btn-danger btn-sm">Development.</button>
                         </div>
                       </div>
                 </div>
@@ -338,7 +328,7 @@
    
     <!-- audio -->
     <audio id="audioPlayer">
-    <source src="audio/Full-Stack.mp3" type="audio/mpeg">
+    <source src="audio/song.mp3" type="audio/mpeg" class="audio">
     Browser Anda tidak mendukung elemen audio.
     </audio>
 
@@ -367,7 +357,7 @@
         toggleButton.addEventListener('click', function () {
             if (audioPlayer.paused) {
             audioPlayer.play(); // Memulai pemutaran audio
-            toggleButton.innerHTML = '<i class="fa fa-pause"></i>'; // Mengubah ikon ke naga (sesuai request sebelumnya)
+            toggleButton.innerHTML = '<i class="fa fa-compact-disc"></i>'; // Mengubah ikon ke naga (sesuai request sebelumnya)
             toggleButton.classList.add('shaking'); // Menambahkan kelas animasi
             pointingHand.style.visibility = 'hidden'; // Sembunyikan tombol tangan dengan mengatur visibilitas
             } else {
