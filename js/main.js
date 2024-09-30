@@ -136,7 +136,7 @@ function createTechLine() {
   techLine.classList.add('tech-line');
 
   // Posisi acak di sepanjang lebar area carousel
-  techLine.style.left = Math.random() * 100 + 'vw'; // 100vw agar posisi garis lebih variatif
+  techLine.style.left = Math.random() * 98 + 'vw'; // 100vw agar posisi garis lebih variatif
 
   // Memilih secara acak antara "0" atau "1"
   const number = Math.random() < 0.5 ? '0' : '1';
