@@ -311,6 +311,7 @@ p {
   display: none; /* Sembunyikan tombol di desktop */
   position: fixed; /* Menempatkan tombol di bawah */
   bottom: 0;
+  padding: 5px 0;
   left: 0;
   right: 0;
   background-color: #fff; /* Warna latar belakang tombol */
@@ -322,7 +323,7 @@ p {
 .footer-link {
   color: black; /* Warna teks */
   text-decoration: none; /* Menghilangkan garis bawah */
-  font-size: 10px; /* Ukuran font */
+  font-size: 15px; /* Ukuran font */
   display: flex; /* Menggunakan flex untuk ikon dan teks */
   flex-direction: column; /* Mengatur ikon di atas teks */
   align-items: center; /* Mengatur konten di tengah */
