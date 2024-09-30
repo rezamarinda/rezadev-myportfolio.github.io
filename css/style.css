@@ -314,7 +314,7 @@ p {
   right: 0;
   background-color: rgb(208, 17, 17); /* Warna latar belakang tombol */
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
   justify-content: space-around; /* Mengatur tombol secara merata */
 }
@@ -322,14 +322,14 @@ p {
 .footer-link {
   color: white; /* Warna teks */
   text-decoration: none; /* Menghilangkan garis bawah */
-  font-size: 18px; /* Ukuran font */
+  font-size: 10px; /* Ukuran font */
   display: flex; /* Menggunakan flex untuk ikon dan teks */
   flex-direction: column; /* Mengatur ikon di atas teks */
   align-items: center; /* Mengatur konten di tengah */
 }
 
 .footer-link i {
-  font-size: 24px; /* Ukuran ikon */
+  font-size: 20px; /* Ukuran ikon */
   margin-bottom: 5px; /* Ruang antara ikon dan teks */
 }
 
