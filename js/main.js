@@ -127,3 +127,32 @@ $('.footerbutton a').on('click', function (event) {
     }
   }
 });
+
+// animasi digital
+const techLinesContainer = document.querySelector('.tech-lines-container');
+
+function createTechLine() {
+  const techLine = document.createElement('div');
+  techLine.classList.add('tech-line');
+
+  // Posisi acak di sepanjang lebar area carousel
+  techLine.style.left = Math.random() * 100 + 'vw'; // 100vw agar posisi garis lebih variatif
+
+  // Memilih secara acak antara "0" atau "1"
+  const number = Math.random() < 0.5 ? '0' : '1';
+  techLine.textContent = number; // Menetapkan teks
+
+  // Durasi acak untuk animasi jatuh
+  techLine.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+  // Tambahkan garis teknologi ke dalam container garis teknologi di dalam carousel
+  techLinesContainer.appendChild(techLine);
+
+  // Hapus setelah animasi selesai
+  setTimeout(() => {
+    techLine.remove();
+  }, 5000); // Hapus garis setelah 5 detik
+}
+
+// Buat garis teknologi setiap 300ms
+setInterval(createTechLine, 100);

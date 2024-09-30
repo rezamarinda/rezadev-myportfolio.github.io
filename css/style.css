@@ -125,6 +125,7 @@ p {
 #home {
   margin-bottom: 6rem;
   background: url(../img/bg-header.png) left top no-repeat;
+  overflow: hidden; /* Menghindari garis keluar dari area carousel */
 }
 
 .typed-cursor {
@@ -312,15 +313,14 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgb(208, 17, 17); /* Warna latar belakang tombol */
+  background-color: #fff; /* Warna latar belakang tombol */
   text-align: center;
-  padding: 5px 0;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
   justify-content: space-around; /* Mengatur tombol secara merata */
 }
 
 .footer-link {
-  color: white; /* Warna teks */
+  color: black; /* Warna teks */
   text-decoration: none; /* Menghilangkan garis bawah */
   font-size: 10px; /* Ukuran font */
   display: flex; /* Menggunakan flex untuk ikon dan teks */
@@ -330,11 +330,10 @@ p {
 
 .footer-link i {
   font-size: 20px; /* Ukuran ikon */
-  margin-bottom: 5px; /* Ruang antara ikon dan teks */
 }
 
 .footer-link:hover {
-  color: black;
+  color: red;
 }
 
 /* Media Query untuk tampilan mobile */
@@ -345,5 +344,60 @@ p {
 
   .footer-button {
     display: flex; /* Tampilkan tombol di mobile */
+  }
+
+  .navbar-brand-img img {
+    display: none;
+  }
+}
+
+/* Animasi teks */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Garis teknologi */
+.tech-line {
+  position: absolute;
+  left: 0; /* Mulai dari kiri */
+  white-space: nowrap; /* Agar teks tidak terpotong */
+  color: rgb(0, 255, 0);
+  opacity: 0; /* Awalnya tidak terlihat */
+  animation: fall linear forwards, fade 1s forwards; /* Animasi jatuh dan memudar */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%); /* Mulai dari atas */
+    opacity: 1; /* Tampil pada awal animasi */
+  }
+  100% {
+    transform: translateY(100vh); /* Jatuh ke bawah layar */
+    opacity: 0; /* Memudar saat jatuh */
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1; /* Tampil pada awal animasi */
+  }
+  100% {
+    opacity: 0; /* Memudar saat jatuh */
   }
 }
