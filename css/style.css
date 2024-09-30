@@ -300,3 +300,50 @@ p {
   opacity: 1;
   padding-bottom: 30px !important;
 }
+
+/* footer start */
+.copyright .row {
+  display: block; /* Menampilkan tulisan copyright */
+}
+
+.footer-button {
+  display: none; /* Sembunyikan tombol di desktop */
+  position: fixed; /* Menempatkan tombol di bawah */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(208, 17, 17); /* Warna latar belakang tombol */
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  justify-content: space-around; /* Mengatur tombol secara merata */
+}
+
+.footer-link {
+  color: white; /* Warna teks */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  font-size: 18px; /* Ukuran font */
+  display: flex; /* Menggunakan flex untuk ikon dan teks */
+  flex-direction: column; /* Mengatur ikon di atas teks */
+  align-items: center; /* Mengatur konten di tengah */
+}
+
+.footer-link i {
+  font-size: 24px; /* Ukuran ikon */
+  margin-bottom: 5px; /* Ruang antara ikon dan teks */
+}
+
+.footer-link:hover {
+  color: black;
+}
+
+/* Media Query untuk tampilan mobile */
+@media (max-width: 768px) {
+  .copyright {
+    display: none; /* Sembunyikan tulisan copyright di mobile */
+  }
+
+  .footer-button {
+    display: flex; /* Tampilkan tombol di mobile */
+  }
+}
