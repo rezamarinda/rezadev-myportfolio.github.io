@@ -1,15 +1,32 @@
 (function ($) {
   'use strict';
 
-  // Spinner
-  var spinner = function () {
-    setTimeout(function () {
-      if ($('#spinner').length > 0) {
-        $('#spinner').removeClass('show');
-      }
-    }, 1);
-  };
-  spinner();
+  // Spinner;
+  document.addEventListener('DOMContentLoaded', () => {
+    const dotsContainer = document.querySelector('.dots');
+    const dotCount = 3; // Jumlah titik
+    const duration = 300; // Durasi per titik dalam ms
+
+    // Membuat dan menambahkan titik ke dalam container
+    Array.from({ length: dotCount }).forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'dot'; // Kelas untuk titik
+      dot.textContent = '.'; // Karakter titik
+      dotsContainer.appendChild(dot);
+
+      // Mengatur timeout untuk setiap titik
+      setTimeout(() => {
+        dot.style.opacity = '1'; // Membuat titik terlihat
+      }, i * duration); // Menjadwalkan titik untuk muncul satu per satu
+    });
+
+    // Sembunyikan spinner setelah beberapa detik
+    setTimeout(() => {
+      const spinner = document.getElementById('spinner');
+      spinner.style.opacity = '0'; // Mengatur opacity menjadi 0
+      spinner.style.visibility = 'hidden'; // Menyembunyikan spinner
+    }, dotCount * duration + 500); // Durasi total + sedikit delay
+  });
 
   // Initiate the wowjs
   new WOW().init();

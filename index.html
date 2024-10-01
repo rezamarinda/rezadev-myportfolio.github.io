@@ -79,10 +79,13 @@
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-      <div class="spinner-border text-danger" style="width: 3rem; height: 3rem" role="status">
-        <span class="sr-only">Loading...</span>
+      <img src="img/profile.png" alt="Laptop" class="laptop" />
+      <div class="loading-container">
+        <span class="loading-text">Loading</span>
+        <span class="dots"></span>
       </div>
     </div>
+
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
@@ -112,32 +115,33 @@
       </div>
     </nav>
     <!-- Navbar End -->
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-dark my-6 mt-0" id="home">
-      <div class="tech-lines-container"></div>
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-            <h1 class="display-3 mb-3">RezaDev</h1>
-            <h2 class="typed-text-output d-inline"></h2>
-            <div class="typed-text d-none">Full Stack Web Developer</div>
-          </div>
-          <div class="col-lg-6">
-            <!-- <div class="button-container"> -->
-            <button id="pointingHand" class="hand-point btn btn-danger btn-sm">
-              <i class="fa fa-hand-point-right"></i>
-            </button>
-            <button id="toggleButton" class="shake-button btn btn-danger btn-sm rounded-circle">
-              <i class="fa fa-music"></i>
-            </button>
-            <!-- </div> -->
-            <img class="img-fluid" src="img/profile.png" alt="" width="400px" />
+    <div class="neon-background">
+      <!-- Header Start -->
+      <div class="container-fluid my-6 mt-0" id="home">
+        <div class="tech-lines-container"></div>
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+              <h1 class="display-3 mb-3">RezaDev</h1>
+              <h2 class="typed-text-output d-inline"></h2>
+              <div class="typed-text d-none">Full Stack Web Developer</div>
+            </div>
+            <div class="col-lg-6">
+              <!-- <div class="button-container"> -->
+              <button id="pointingHand" class="hand-point btn btn-danger btn-sm">
+                <i class="fa fa-hand-point-right"></i>
+              </button>
+              <button id="toggleButton" class="shake-button btn btn-danger btn-sm rounded-circle">
+                <i class="fa fa-music"></i>
+              </button>
+              <!-- </div> -->
+              <img class="img-fluid" src="img/profile.png" alt="" width="400px" />
+            </div>
           </div>
         </div>
       </div>
+      <!-- Header End -->
     </div>
-    <!-- Header End -->
 
     <!-- About Start -->
     <div class="container-xxl py-6" id="about">
