@@ -5,7 +5,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const dotsContainer = document.querySelector('.dots');
     const dotCount = 3; // Jumlah titik
-    const duration = 1000; // Durasi per titik dalam ms
+    const duration = 500; // Durasi per titik dalam ms
 
     // Membuat dan menambahkan titik ke dalam container
     Array.from({ length: dotCount }).forEach((_, i) => {

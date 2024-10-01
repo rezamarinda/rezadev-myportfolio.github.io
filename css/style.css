@@ -168,7 +168,6 @@ p {
     padding: 10px 0;
   }
 }
-
 /*** Header ***/
 #home {
   margin-bottom: 6rem;
@@ -400,6 +399,22 @@ p {
 
   .navbar-brand-img img {
     display: none;
+  }
+
+  .navbar.fixed-top {
+    display: flex;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  #project {
+    margin-top: 40px;
+  }
+
+  #contact {
+    margin-top: 40px;
   }
 }
 

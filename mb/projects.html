@@ -27,10 +27,10 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
 
     <style>
       /* akhir */
@@ -77,96 +77,16 @@
   </head>
 
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-      <img src="img/profile.png" alt="Laptop" class="laptop" />
-      <div class="loading-container">
-        <span>Loading</span>
-        <div class="dots"></div>
-      </div>
-    </div>
-
-    <!-- Spinner End -->
-
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
       <a href="#" class="navbar-brand d-block d-lg-none">
         <h1 class="text-danger fw-bold m-0">
-          <img src="img/logo.png" width="45px" alt="Logo RezaDev" />
+          <img src="../img/logo.png" width="45px" alt="Logo RezaDev" />
           RezaDev
         </h1>
       </a>
-
-      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
-        <div class="navbar-nav ms-auto py-0">
-          <a href="#home" class="nav-item nav-link active">Utama</a>
-          <a href="#about" class="nav-item nav-link">Tentang</a>
-        </div>
-        <a href="#" class="navbar-brand-img d-block">
-          <img src="img/logo.png" width="80px" alt="Logo RezaDev" />
-        </a>
-        <div class="navbar-nav me-auto py-0">
-          <a href="#project" class="nav-item nav-link">Proyek</a>
-          <a href="#contact" class="nav-item nav-link">Kontak</a>
-        </div>
-      </div>
     </nav>
     <!-- Navbar End -->
-    <div class="neon-background">
-      <!-- Header Start -->
-      <div class="container-fluid my-6 mt-0" id="home">
-        <div class="tech-lines-container"></div>
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-              <h1 class="display-3 mb-3">RezaDev</h1>
-              <h2 class="typed-text-output d-inline"></h2>
-              <div class="typed-text d-none">Full Stack Web Developer</div>
-            </div>
-            <div class="col-lg-6">
-              <!-- <div class="button-container"> -->
-              <button id="pointingHand" class="hand-point btn btn-danger btn-sm">
-                <i class="fa fa-hand-point-right"></i>
-              </button>
-              <button id="toggleButton" class="shake-button btn btn-danger btn-sm rounded-circle">
-                <i class="fa fa-music"></i>
-              </button>
-              <!-- </div> -->
-              <img class="img-fluid" src="img/profile.png" alt="" width="400px" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Header End -->
-    </div>
-
-    <!-- About Start -->
-    <div class="container-xxl py-6" id="about">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="d-flex align-items-center mb-5">
-              <div class="col-lg-6">
-                <h1 class="display-5 mb-0">Tentang Saya</h1>
-              </div>
-            </div>
-            <div class="card border-danger">
-              <div class="card-body bg-dark">
-                <p class="mb-4" style="text-align: justify">
-                  "Halo! Saya RezaDev, seorang Full Stack Web Developer dengan keahlian dalam membangun aplikasi web dari awal hingga akhir. Dari front-end hingga back-end, saya memadukan teknologi modern untuk menciptakan solusi yang
-                  efisien dan user-friendly."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- About End -->
-
     <!-- Projects Start -->
     <div class="container-xxl py-6 pt-5" id="project">
       <div class="container">
@@ -179,7 +99,7 @@
           <div class="col-lg-4 portfolio-item first">
             <div class="card border-danger bg-dark">
               <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/project-1.png" alt="" />
+                <img class="img-fluid" src="../img/project-1.png" alt="" />
                 <div class="portfolio-btn">
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-1.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
@@ -196,7 +116,7 @@
           <div class="col-lg-4 portfolio-item second">
             <div class="card border-danger bg-dark">
               <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/project-2.png" alt="" />
+                <img class="img-fluid" src="../img/project-2.png" alt="" />
                 <div class="portfolio-btn">
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-2.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
@@ -213,7 +133,7 @@
           <div class="col-lg-4 portfolio-item first">
             <div class="card border-danger bg-dark">
               <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/project-3.png" alt="" />
+                <img class="img-fluid" src="../img/project-3.png" alt="" />
                 <div class="portfolio-btn">
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
@@ -230,7 +150,7 @@
           <div class="col-lg-4 portfolio-item first">
             <div class="card border-danger bg-dark">
               <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/project-4.png" alt="" />
+                <img class="img-fluid" src="../img/project-4.png" alt="" />
                 <div class="portfolio-btn">
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-4.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
@@ -247,7 +167,7 @@
           <div class="col-lg-4 portfolio-item first">
             <div class="card border-danger bg-dark">
               <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/project-5.png" alt="" />
+                <img class="img-fluid" src="../img/project-5.png" alt="" />
                 <div class="portfolio-btn">
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
@@ -264,7 +184,7 @@
           <div class="col-lg-4 portfolio-item first">
             <div class="card border-danger bg-dark">
               <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/project-6.png" alt="" />
+                <img class="img-fluid" src="../img/project-6.png" alt="" />
                 <div class="portfolio-btn">
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-6.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
@@ -281,7 +201,7 @@
           <div class="col-lg-4 portfolio-item first">
             <div class="card border-danger bg-dark">
               <div class="portfolio-img rounded overflow-hidden">
-                <img class="img-fluid" src="img/project-7.png" alt="" />
+                <img class="img-fluid" src="../img/project-7.png" alt="" />
                 <div class="portfolio-btn">
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-7.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                   <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
@@ -300,58 +220,19 @@
     </div>
     <!-- Projects End -->
 
-    <!-- Contact Start -->
-    <div class="container-xxl pb-5" id="contact">
-      <div class="container py-5">
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="col-lg-6">
-            <h1 class="display-5 mb-0">Mari Bekerja Sama</h1>
-          </div>
-        </div>
-        <div class="row g-5">
-          <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-            <p class="mb-2">Ikuti saya:</p>
-            <div class="d-flex pt-2">
-              <a class="btn btn-square btn-danger me-2" href=""><i class="fab fa-twitter"></i></a>
-              <a class="btn btn-square btn-danger me-2" href=""><i class="fab fa-instagram"></i></a>
-              <a class="btn btn-square btn-danger me-2" href=""><i class="fab fa-facebook-f"></i></a>
-            </div>
-            <hr class="w-100" />
-            <p class="mb-2">Telepon saya:</p>
-            <h3 class="fw-bold">+6282214883684</h3>
-            <hr class="w-100" />
-            <p class="mb-2">Email saya:</p>
-            <h3 class="fw-bold">rezamarinda17@gmail.com</h3>
-            <hr class="w-100" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Contact End -->
-
-    <!-- Map Start -->
-    <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container-xxl pt-5 px-0">
-        <div class="bg-dark">
-          <!-- map -->
-        </div>
-      </div>
-    </div>
-    <!-- Map End -->
-
     <!-- Copyright Start -->
-    <div class="container-fluid bg-dark text-white py-4 mt-4">
+    <div class="container-fluid text-white py-4 mt-4">
       <div class="container">
-        <div class="copyright">
+        <div class="copyright fixed-bottom">
           <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a class="border-bottom text-danger" href="https://rezamarinda.github.io/">RezaDev</a>, All Right Reserved.</div>
           </div>
         </div>
         <div class="footer-button footerbutton">
-          <a href="#" class="footer-link"><i class="bi bi-house-door-fill"></i>Beranda</a>
-          <a href="mb/about.html" class="footer-link"><i class="bi bi-info-square-fill"></i>Tentang</a>
-          <a href="mb/projects.html" class="footer-link"><i class="bi bi-clipboard2-check-fill"></i>Proyek</a>
-          <a href="mb/contact.html" class="footer-link"><i class="bi bi-person-square"></i>Kontak</a>
+          <a href="../index.html" class="footer-link"><i class="bi bi-house-door-fill"></i>Beranda</a>
+          <a href="about.html" class="footer-link"><i class="bi bi-info-square-fill"></i>Tentang</a>
+          <a href="projects.html" class="footer-link"><i class="bi bi-clipboard2-check-fill"></i>Proyek</a>
+          <a href="contact.html" class="footer-link"><i class="bi bi-person-square"></i>Kontak</a>
         </div>
       </div>
     </div>
@@ -359,24 +240,24 @@
 
     <!-- audio -->
     <audio id="audioPlayer">
-      <source src="audio/song.mp3" type="audio/mpeg" class="audio" />
+      <source src="../audio/song.mp3" type="audio/mpeg" class="audio" />
       Browser Anda tidak mendukung elemen audio.
     </audio>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/typed/typed.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
